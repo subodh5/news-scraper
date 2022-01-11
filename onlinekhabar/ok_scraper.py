@@ -3,7 +3,6 @@ import requests
 import re
 import csv
 
-#functions
 def extract_news(link):
     text=' '
     response=requests.get(link)
@@ -72,4 +71,3 @@ for i in range(50,0,-1):
             full_news.append(main_content)
 
             writeToCSV(full_news)
-        # writeToFile(full_news)
