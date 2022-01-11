@@ -21,7 +21,7 @@ def extract_news(link):
 
 #write to csv file
 def writeToCSV(text):
-    with open("C:\\Users\\subodh\\Desktop\\python\\scrap\\onlinekhabar\\okhabar9.csv", 'a', encoding="utf-8") as csvfile:
+    with open("C:\\Users\\subodh\\Desktop\\python\\scrap\\onlinekhabar\\okhabar.csv", 'a', encoding="utf-8") as csvfile:
         csvwriter = csv.writer(csvfile, delimiter='|', quotechar='`', quoting=csv.QUOTE_ALL, lineterminator='\n')
         csvwriter.writerow(text)
 
@@ -51,7 +51,6 @@ def findCategory(link):
 for i in range(50,0,-1):
 
     #onlinekhabar.com/'year'/'month'/page/'number'
-    print(i)
     http="https://www.onlinekhabar.com/2021/12/page/" + str(i)
 
     response=requests.get(http)
